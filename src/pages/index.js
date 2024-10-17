@@ -7,7 +7,7 @@ import { FaChevronLeft, FaSearchengin } from "react-icons/fa6";
 import { FaAngleRight } from "react-icons/fa6";
 import RentIcon from "../../public/icons/RentIcon";
 import FoodExpense from "../../public/icons/FoodExpenseIcon";
-import AddRecord from "@/components/AddRecord";
+import { useRouter } from "next/router";
 
 const categories = [
   "Food & Drinks",
@@ -132,8 +132,7 @@ let checked = [
   "true",
 ];
 const Home = () => {
-  const [showAdd, setShowAdd] = useState(false);
-
+  const router = useRouter();
   const [selected, setSelected] = useState("All");
   const [myRecords, setRecords] = useState(records);
 
@@ -178,17 +177,11 @@ const Home = () => {
   };
 
   const handleAdd = () => {
-    setShowAdd(!showAdd);
+    router.push("/create-record");
   };
-  // const opacity = showAdd === false ? "opacity-100" : "opacity-100";
+
   return (
-    // <div className="flex justify-center items-center flex-col">
     <div>
-      {showAdd && (
-        <div className="z-30 fixed top-0 left-0 right-0 bottom-0 bg-gray-400 flex justify-center items-center">
-          <AddRecord onCloseModal={handleAdd} />
-        </div>
-      )}
       <div className={`bg-[#F3F4F6] flex flex-col gap-8 items-center relative`}>
         <Navbar />
 
