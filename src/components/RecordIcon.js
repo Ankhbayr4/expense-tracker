@@ -1,6 +1,10 @@
 import { Apple } from "lucide-react";
 import { Utensils } from "lucide-react";
 import { House } from "lucide-react";
+import { Gift } from "lucide-react";
+import { Wine } from "lucide-react";
+import { CarTaxiFront } from "lucide-react";
+import { Shirt } from "lucide-react";
 
 const categoryIcons = [
   {
@@ -15,22 +19,22 @@ const categoryIcons = [
   },
   {
     categoryId: 7,
-    icon: <Apple color="white" />,
+    icon: <Gift color="white" />,
     color: "red",
   },
   {
     categoryId: 8,
-    icon: <Apple color="white" />,
+    icon: <Wine color="white" />,
     color: "red",
   },
   {
     categoryId: 9,
-    icon: <Apple color="white" />,
+    icon: <CarTaxiFront color="white" />,
     color: "red",
   },
   {
     categoryId: 10,
-    icon: <Apple color="white" />,
+    icon: <Shirt color="white" />,
     color: "red",
   },
 ];
