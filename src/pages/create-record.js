@@ -83,11 +83,11 @@ const CreateRecordPage = () => {
             Choose
           </option>
           <option value={1}>Food</option>
-          <option>Home</option>
-          <option>Gift</option>
-          <option>drink</option>
-          <option>Taxi</option>
-          <option>Shopping</option>
+          <option value={6}>Home</option>
+          <option value={7}>Gift</option>
+          <option value={8}>drink</option>
+          <option value={9}>Taxi</option>
+          <option value={10}>Shopping</option>
         </select>
       </label>
 

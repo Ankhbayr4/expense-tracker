@@ -1,9 +1,13 @@
+import { useRouter } from "next/router";
 import Logo from "../../public/icons/Logo";
 
-const Navbar = (props) => {
-  const { onClick } = props;
+const Navbar = () => {
+  const router = useRouter();
+  const handleClick = () => {
+    router.push("/create-record");
+  };
   return (
-    <div className="bg-white w-full px-[120px] py-4 flex justify-between max-w-screen-xl">
+    <div className="bg-white w-full py-4 flex justify-between">
       <div className="flex gap-6 items-center">
         <Logo />
         <p> Dashboard </p>
@@ -11,7 +15,7 @@ const Navbar = (props) => {
       </div>
       <div className="flex items-center gap-6">
         <button
-          onClick={onClick}
+          onClick={handleClick}
           className="bg-[#0166FF] py-1.5 px-3 text-white rounded-3xl text-base"
         >
           + Record
